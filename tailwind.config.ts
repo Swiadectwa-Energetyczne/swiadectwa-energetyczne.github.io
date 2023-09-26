@@ -7,6 +7,12 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    fontFamily: {
+      'display': ["var(--display-font)", "sans-serif"],
+    },
+    colors: {
+      'button-hover': 'rgba(6,78,59,0.1)',
+    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
