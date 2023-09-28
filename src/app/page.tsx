@@ -1,6 +1,6 @@
 import Header from '../components/header';
 import Footer from '@/components/footer';
-import ImageWithText from '@/components/image-with-text';
+import Why from '@/section/why';
 
 export default function Home() {
   return (
@@ -21,7 +21,8 @@ export default function Home() {
           naszej planety. Jestem przekonana, że innowacje w dziedzinie budownictwa mogą mieć pozytywny wpływ na nasze
           środowisko.
         </section>
-        <section id="how">Jak to działa
+        <section id="how">
+          <span className="font-bold text-3xl">Jak to działa?</span>
           - Wypełnienie formularza kontaktowego
           - Kontakt w celu uzyskania informacji na temat budynku
           - Ustalenie ceny oraz opłacenie Świadectwa Charakterystyki Energetycznej
@@ -34,25 +35,20 @@ export default function Home() {
           - Inny budynek (od 590zł Brutto Cena zależna od metrażu) (Realizacja do 5 dni roboczych)
           - Inwentaryzacja - w przypadku dokumentacji technicznej budynku/mieszkania (Cena ustalana indywidualnie)
         </section>
-        <section className="my-32" id="why">
-          <span className="font-bold text-3xl">Dlaczego potrzebujesz Świadectwo Charakterystyki Energetycznej?</span>
-          <ImageWithText image="coins-green.svg" alt="Sprzedaż" text="Obowiązkowe w przypadku sprzedaży lub wynajmu nieruchomości."/>
-          <ImageWithText image="home-green.svg" alt="Budowa" text="Niezbędne w przypadku budowy nowego budynku - przy odbiorze budowlanym."/>
-          <ImageWithText image="hammer-crash-green.svg" alt="Termomodernizacja" text="Wymagane w przypadku termomodernizacji istniejącego budynku lub niektórych działaniach remontowych."/>
-          <ImageWithText image="chart-line-up-green.svg" alt="Ocena efektywności" text="Przydatne w ocenie efektywności energetycznej budynku."/>
-          <ImageWithText image="search-alt-green.svg" alt="Ustawa" htmlText={["Po więcej informacji odsyłam do ustawy: ", <a className='font-medium text-lg' href='https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20160000831/T/D20160831L.pdf' target='_blank'>&nbsp;Dz.U. 2016 poz. 831</a>]}/>
+        <section id="why">
+          <Why/>
         </section>
         <section id="contact">
           <span>Kontakt</span>
           <ul className={"list-disc list-inside"}>
-            <li>Imię</li>
-            <li>Nazwisko</li>
-            <li>Telefon kontaktowy</li>
-            <li>Email</li>
-            <li>Kod-Pocztowy</li>
-            <li>Temat</li>
-            <li>Treść wiadomości</li>
-            <li>Zgoda na przetwarzanie i polityka prywatności</li>
+            <li key="name">Imię</li>
+            <li key="surname">Nazwisko</li>
+            <li key="tel">Telefon kontaktowy</li>
+            <li key="mail">Email</li>
+            <li key="post">Kod-Pocztowy</li>
+            <li key="sub">Temat</li>
+            <li key="content">Treść wiadomości</li>
+            <li key="agreement">Zgoda na przetwarzanie i polityka prywatności</li>
           </ul>
         </section>
         <section>
