@@ -8,7 +8,7 @@ export default function Home() {
     <main className="font-sans flex flex-col h-screen">
       <Header/>
       <article className="xl:mx-64 xl:my-10 mx-4 my-6 flex-1">
-        <section id="about-me">Cześć! Jestem Monika, absolwentka studiów o kierunku budownictwo na renomowanej
+        <section id="about">Cześć! Jestem Monika, absolwentka studiów o kierunku budownictwo na renomowanej
           Politechnice Poznańskiej. Moja pasja do projektowania i konstruowania budynków jest nieodłączną częścią mojego
           życia. Obecnie pracuję jako asystentka projektanta konstruktora, dążąc do zdobycia niezbędnego doświadczenia,
           które pozwoli mi uzyskać uprawnienia konstrukcyjne.
@@ -22,7 +22,7 @@ export default function Home() {
           naszej planety. Jestem przekonana, że innowacje w dziedzinie budownictwa mogą mieć pozytywny wpływ na nasze
           środowisko.
         </section>
-        <section id="cennik">Cennik
+        <section id="price">Cennik
           - Mieszkanie (od 290 zł Brutto) (Realizacja do 3 dni roboczych)
           - Budynek mieszkalny jednorodzinny (od 490 zł Brutto) (Realizacja do 3 dni roboczych)
           - Lokal użytkowy (od 490zł Brutoo) (Realizacja do 3dni roboczych)
