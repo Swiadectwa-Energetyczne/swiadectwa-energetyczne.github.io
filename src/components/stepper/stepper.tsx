@@ -8,7 +8,7 @@ interface StepperProps {
 
 export const Stepper = ({animation, stepperData}: StepperProps) => {
   return (
-    <div className="flex flex-row justify-between flex-wrap">
+    <div className="flex flex-row justify-between flex-wrap items-center">
       {
         stepperData.map((data, i) => {
           if (i === 0)
