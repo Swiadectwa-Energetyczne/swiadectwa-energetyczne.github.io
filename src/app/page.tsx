@@ -1,6 +1,7 @@
 import Header from '../components/header';
 import Footer from '@/components/footer';
 import Why from '@/section/why';
+import How from '@/section/how';
 
 export default function Home() {
   return (
@@ -21,19 +22,15 @@ export default function Home() {
           naszej planety. Jestem przekonana, że innowacje w dziedzinie budownictwa mogą mieć pozytywny wpływ na nasze
           środowisko.
         </section>
-        <section id="how">
-          <span className="font-bold text-3xl">Jak to działa?</span>
-          - Wypełnienie formularza kontaktowego
-          - Kontakt w celu uzyskania informacji na temat budynku
-          - Ustalenie ceny oraz opłacenie Świadectwa Charakterystyki Energetycznej
-          - Przygotowanie Świadectwa Charakterystyki Energetycznej
-        </section>
         <section id="cennik">Cennik
           - Mieszkanie (od 290 zł Brutto) (Realizacja do 3 dni roboczych)
           - Budynek mieszkalny jednorodzinny (od 490 zł Brutto) (Realizacja do 3 dni roboczych)
           - Lokal użytkowy (od 490zł Brutoo) (Realizacja do 3dni roboczych)
           - Inny budynek (od 590zł Brutto Cena zależna od metrażu) (Realizacja do 5 dni roboczych)
           - Inwentaryzacja - w przypadku dokumentacji technicznej budynku/mieszkania (Cena ustalana indywidualnie)
+        </section>
+        <section id="how">
+          <How/>
         </section>
         <section id="why">
           <Why/>

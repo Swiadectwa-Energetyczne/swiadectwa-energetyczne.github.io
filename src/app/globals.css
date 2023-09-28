@@ -13,4 +13,5 @@ html, body {
   background: var(--background-primary);
   height: 100vh;
   min-width: 320px;
+  cursor: default;
 }

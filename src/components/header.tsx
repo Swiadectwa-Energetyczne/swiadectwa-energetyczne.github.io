@@ -7,6 +7,7 @@ export default function Header() {
       <div className="md:flex items-center space-x-5 text-xl hidden">
         <HeaderNavigation href="#o-mnie" text="O mnie"/>
         <HeaderNavigation href="#why" text="ŚChE - Dlaczego?"/>
+        <HeaderNavigation href="#how" text="Jak zamówić?"/>
         <HeaderNavigation href="#kontakt" text="Kontakt"/>
       </div>
     </header>

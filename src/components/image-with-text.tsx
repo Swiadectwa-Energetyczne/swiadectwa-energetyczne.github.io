@@ -5,11 +5,13 @@ interface ImageWithTextProps {
   alt: string;
   text?: string
   htmlText?: any[];
+  animation?: boolean;
 }
 
-export const ImageWithText = ({image, alt, text, htmlText}: ImageWithTextProps) => {
+export const ImageWithText = ({image, alt, text, htmlText, animation}: ImageWithTextProps) => {
   return (
-    <span className="flex flex-row items-center font-medium text-lg"><Image className="my-2 mx-4" width={36} height={36} src={image} alt={alt}/>{text ? text : htmlText}</span>
+    <div className={(animation ? "md:hover:animate-pulse ": "") + "flex flex-row items-center font-medium text-lg my-2"}>
+      <Image className="my-2 mx-4" width={36} height={36} src={image} alt={alt}/>{text ? text : htmlText}</div>
   )
 }
 
