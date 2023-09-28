@@ -1,8 +1,9 @@
+import Link from 'next/link';
 
 export default function Footer() {
   return (
     <footer className="text-l font-medium bg-secondary-bg font text-font-secondary h-12 sm:h-32 flex flex-row items-center justify-center">
-      <span>Link do polityki prywatności na osobnej stronie</span>
+      <Link href="/privacy-policy">Polityka prywatności</Link>
       <span>Email</span>
       <span>Facebook</span>
       <span>Instagram</span>
