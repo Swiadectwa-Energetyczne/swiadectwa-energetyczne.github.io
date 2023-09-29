@@ -14,7 +14,6 @@ export const metadata: Metadata = {
   publisher: 'Github Pages',
   keywords: ['Świadectwa Charakterystyki Energetycznej', 'Ekologia', 'Eko', 'Świadectwa', 'Certyfikaty', 'fotowoltaika', 'Energia', 'swiadectwa-eko', 'SCE', 'efektywność energetyczna', 'budynki', 'ekspert energetyczny', 'inwentaryzacje'],
   category: 'Ekologia',
-  // TODO { verification: { google: '1234567890', yandex: '1234567890', 'me': '1234567890' } }
 }
 
 export default function RootLayout({
