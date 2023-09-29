@@ -14,7 +14,7 @@ export const How = () => {
 
   return (
     <>
-      <div className="font-bold text-3xl my-2">Jak to działa?</div>
+      <div className="font-bold text-3xl my-2">Jak zamówić?</div>
       <Stepper animation={true} stepperData={stepperData}/>
     </>
   );

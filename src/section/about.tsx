@@ -3,6 +3,7 @@ import TextContent from '@/components/text-content';
 export const About = () => {
   return (
     <div className="text-lg font-medium break-normal">
+      <div className="font-bold text-3xl my-2">O mnie</div>
       <TextContent additionalClass="text-xl" htmlText={["Cześć!"]}/>
       <TextContent htmlText={["Jestem",
         <span key="about-monika" className="text-lg font-semibold"> Monika</span>,
