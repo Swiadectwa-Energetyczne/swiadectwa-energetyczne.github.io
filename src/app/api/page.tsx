@@ -1,12 +1,12 @@
 import { sendEmail } from '@/lib/send-grid';
 
-export default async (req, res) => {
+export default async () => {
   try {
     await sendEmail();
-    res.status(200).json({ message: 'Email sent successfully' });
+    // res.status(200).json({ message: 'Email sent successfully' });
   } catch (error) {
     console.error(error);
-    console.error(res);
-    res.status(500).json({ message: 'Internal Server Error' });
+    // console.error(res);
+    // res.status(500).json({ message: 'Internal Server Error' });
   }
 }
