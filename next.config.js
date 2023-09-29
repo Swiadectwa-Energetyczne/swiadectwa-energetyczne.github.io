@@ -28,10 +28,6 @@ const nextConfig = {
         unoptimized: true,
     },
 
-    env: {
-        'send_grid_api_key': process.env.TEST
-    }
-
 };
 
 module.exports = nextConfig;
