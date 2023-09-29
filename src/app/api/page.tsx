@@ -1,6 +1,6 @@
 import { sendEmail } from '@/lib/send-grid';
 
-export default async (req, res) => {
+export default async () => {
   try {
     await sendEmail();
     // res.status(200).json({ message: 'Email sent successfully' });
