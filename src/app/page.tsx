@@ -16,7 +16,7 @@ export default function Home() {
           Authorization: `Bearer ${process.env.send_grid_api_key}`,
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({"personalizations": [{"to": [{"email": "drolewski@gmail.com"}]}],"from": {"email": "swiadectwa.eko@example.com"},"subject": "Sending with SendGrid is Fun","content": [{"type": "text/plain", "value": "and easy to do anywhere, even with cURL"}]})
+        body: JSON.stringify({"personalizations": [{"to": [{"email": "drolewski@gmail.com"}]}],"from": {"email": "swiadectwa.eko@gmail.com"},"subject": "Sending with SendGrid is Fun","content": [{"type": "text/plain", "value": "and easy to do anywhere, even with cURL"}]})
       });
       const data = await res.json();
       console.log(data);

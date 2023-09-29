@@ -29,7 +29,7 @@ const nextConfig = {
     },
 
     env: {
-        'send_grid_api_key': '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'
+        'send_grid_api_key': process.env.TEST
     }
 
 };
