@@ -76,7 +76,7 @@ jobs:
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
         env:
-          SEND_GRID_API_KEY: ${{ secrets.SEND_GRID_API_KEY }}
+          send_grid_api_key: ${{ secrets.SEND_GRID_API_KEY }}
       - name: Static HTML export with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
       - name: Upload artifact
