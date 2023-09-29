@@ -1,5 +1,4 @@
-import { sendEmail } from '@/lib/send-grid';
-
+'use client'
 type JSONProps = {
   data?: string[];
 };
