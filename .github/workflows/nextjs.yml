@@ -77,8 +77,8 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: |
-          touch .env.production
-          echo send_grid_api_key=${{ secrets.SEND_GRID_API_KEY }} >> .env.production
+          touch .env.local
+          echo send_grid_api_key=${{ secrets.SEND_GRID_API_KEY }} >> .env.local
           ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Static HTML export with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
