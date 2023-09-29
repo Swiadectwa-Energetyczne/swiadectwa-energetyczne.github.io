@@ -1,8 +1,9 @@
 import './globals.css'
-import type { Metadata } from 'next'
-import { Montserrat } from 'next/font/google'
+import type {Metadata} from 'next'
+import {Analytics} from '@vercel/analytics/react';
+import {Montserrat} from 'next/font/google'
 
-const montserrat = Montserrat({ subsets: ['latin'], variable: '--display-font', })
+const montserrat = Montserrat({subsets: ['latin'], variable: '--display-font',})
 
 export const metadata: Metadata = {
   title: 'Świadectwa Charakterystyki Energetycznej',
@@ -17,13 +18,16 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  children,
-}: {
+                                     children,
+                                   }: {
   children: React.ReactNode
 }) {
   return (
     <html lang='pl'>
-      <body className={`${montserrat.variable} font-display`}>{children}</body>
+    <body className={`${montserrat.variable} font-display`}>
+    {children}
+    <Analytics/>
+    </body>
     </html>
   )
 }
