@@ -1,13 +1,27 @@
+'use client';
 import Header from '../components/header';
 import Footer from '@/components/footer';
 import Why from '@/section/why';
 import How from '@/section/how';
 import About from '@/section/about';
 import Price from '@/section/price';
+import {sendEmail} from '@/lib/send-grid';
 
 export default function Home() {
+  const callAPI = async () => {
+    try {
+      await sendEmail()
+    } catch (err) {
+    }
+  };
+
   return (
     <main className="font-sans flex flex-col h-screen">
+      <div>
+        <main>
+          <button onClick={callAPI}>Make API call</button>
+        </main>
+      </div>
       <Header/>
       <article className="xl:mx-64 xl:my-10 mx-6 my-8 flex-1">
         <section id="about">
