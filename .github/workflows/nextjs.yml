@@ -31,6 +31,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Test
+        env:
+          TEST_GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TEST_SECRET: ${{ secrets.TEST_SECRET }}
+          VARS: ${{ vars.SEND_GRID_API_KEY }}
+          VARS_XD: ${{ secrets.SEND_GRID_API_KEY }}
+        run: |
+          echo ${#TEST_GITHUB_TOKEN}
+          echo ${#TEST_SECRET}
+          echo ${#VARS}
+          echo ${#VARS_XD}
       - name: Detect package manager
         id: detect-package-manager
         run: |
