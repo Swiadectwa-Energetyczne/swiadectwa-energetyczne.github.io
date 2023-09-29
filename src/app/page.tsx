@@ -3,6 +3,7 @@ import Footer from '@/components/footer';
 import Why from '@/section/why';
 import How from '@/section/how';
 import About from '@/section/about';
+import Price from '@/section/price';
 
 export default function Home() {
   return (
@@ -12,12 +13,8 @@ export default function Home() {
         <section id="about">
           <About/>
         </section>
-        <section id="price">Cennik
-          - Mieszkanie (od 290 zł Brutto) (Realizacja do 3 dni roboczych)
-          - Budynek mieszkalny jednorodzinny (od 490 zł Brutto) (Realizacja do 3 dni roboczych)
-          - Lokal użytkowy (od 490zł Brutoo) (Realizacja do 3dni roboczych)
-          - Inny budynek (od 590zł Brutto Cena zależna od metrażu) (Realizacja do 5 dni roboczych)
-          - Inwentaryzacja - w przypadku dokumentacji technicznej budynku/mieszkania (Cena ustalana indywidualnie)
+        <section id="price">
+          <Price/>
         </section>
         <section id="how">
           <How/>

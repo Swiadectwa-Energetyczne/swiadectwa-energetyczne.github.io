@@ -14,6 +14,7 @@ const config: Config = {
       'button-hover': 'rgba(6,78,59,0.1)',
       'secondary-bg': '#064E3B',
       'font-secondary': '#f3f2e7',
+      'primary-bg-lighter': '#f3f2e7',
     },
     extend: {
       backgroundImage: {
