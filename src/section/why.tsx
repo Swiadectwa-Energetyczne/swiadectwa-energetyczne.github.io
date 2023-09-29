@@ -18,7 +18,7 @@ export const Why = () => {
                      text="Przydatne w ocenie efektywności energetycznej budynku."/>
       <ImageWithText image="search-alt-green.svg" alt="Ustawa"
                      animation={true} htmlText={["Po więcej informacji odsyłam do ustawy: ",
-        <a key="ustawa" className='font-medium text-lg'
+        <a key="ustawa" className='font-medium text-lg break-normal'
            href='https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20160000831/T/D20160831L.pdf'
            target='_blank'>&nbsp;Dz.U. 2016 poz. 831</a>]}/>
     </>

@@ -5,7 +5,7 @@ interface HeaderNavigationProps {
 
 export const HeaderNavigation = ({href, text}: HeaderNavigationProps) => {
   return (
-    <a className="py-2 px-5 rounded-full hover:bg-button-hover" href={href}>{text}</a>
+    <a className="py-2 px-5 rounded-full lg:hover:bg-button-hover" href={href}>{text}</a>
   )
 };
 
