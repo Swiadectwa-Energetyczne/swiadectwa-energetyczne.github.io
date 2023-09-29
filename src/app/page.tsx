@@ -2,25 +2,15 @@ import Header from '../components/header';
 import Footer from '@/components/footer';
 import Why from '@/section/why';
 import How from '@/section/how';
+import About from '@/section/about';
 
 export default function Home() {
   return (
     <main className="font-sans flex flex-col h-screen">
       <Header/>
-      <article className="xl:mx-64 xl:my-10 mx-4 my-6 flex-1">
-        <section id="about">Cześć! Jestem Monika, absolwentka studiów o kierunku budownictwo na renomowanej
-          Politechnice Poznańskiej. Moja pasja do projektowania i konstruowania budynków jest nieodłączną częścią mojego
-          życia. Obecnie pracuję jako asystentka projektanta konstruktora, dążąc do zdobycia niezbędnego doświadczenia,
-          które pozwoli mi uzyskać uprawnienia konstrukcyjne.
-          Dodatko wykonuję Świadectwa Charakterystyki Energetyczej, co łączy moją dzisiejszą pracę z doświadczeniem w
-          projektowaniu instalacji fotowoltaicznych. Widzę w nich potencjał do zmiany naszego sposobu korzystania z
-          energii, tworząc bardziej zrównoważone i ekologiczne środowisko.
-          Nie tylko w pracy, ale i w życiu prywatnym, staram się wykazywać ekologiczne podejście. Uważam, że naszym
-          wspólnym celem powinno być podnoszenie poziomu energetycznego w budynkach, które nie tylko spełniają swoje
-          funkcje, ale także są efektywne energetycznie i przyjazne dla środowiska.
-          W mojej pracy zawodowej i osobistym życiu staram się łączyć pasję do budownictwa z zobowiązaniem do ochrony
-          naszej planety. Jestem przekonana, że innowacje w dziedzinie budownictwa mogą mieć pozytywny wpływ na nasze
-          środowisko.
+      <article className="xl:mx-64 xl:my-10 mx-6 my-8 flex-1">
+        <section id="about">
+          <About/>
         </section>
         <section id="price">Cennik
           - Mieszkanie (od 290 zł Brutto) (Realizacja do 3 dni roboczych)
