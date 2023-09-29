@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   authors: {url: 'https://www.linkedin.com/in/dominik-rolewski-01bba9155/', name: 'Dominik Rolewski'},
   creator: 'Dominik Rolewski',
   other: {'instagram': 'TBD', 'facebook': 'TBD'},
-  publisher: 'Github Pages',
+  publisher: 'Vercel',
   keywords: ['Świadectwa Charakterystyki Energetycznej', 'Ekologia', 'Eko', 'Świadectwa', 'Certyfikaty', 'fotowoltaika', 'Energia', 'swiadectwa-eko', 'SCE', 'efektywność energetyczna', 'budynki', 'ekspert energetyczny', 'inwentaryzacje'],
   category: 'Ekologia',
 }
