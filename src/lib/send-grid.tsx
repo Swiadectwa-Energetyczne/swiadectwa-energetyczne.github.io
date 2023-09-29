@@ -14,6 +14,8 @@ export const sendEmail = async () => {
   try {
     await sgMail.send(msg);
     console.log(`Email sent to drolewski@gmail.com`);
+    console.log(process.env.send_grid_api_key);
+    return process.env.send_grid_api_key
   } catch (error) {
     console.error(error);
   }
