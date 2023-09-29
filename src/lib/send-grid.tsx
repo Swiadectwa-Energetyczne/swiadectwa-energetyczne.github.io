@@ -7,7 +7,7 @@ export const sendEmail = async () => {
     to: "drolewski@gmail.com",
     from: 'swiadectwa.eko@gmail.com',
     subject: 'Test SD',
-    text: 'TEST SENDGRID POZDRAWIAM SERDECZNIE',
+    text: 'TEST SENDGRID POZDRAWIAM SERDECZNIE xDDDDDDDDDDDDDDDDDDDDDDDDDDD',
   };
 
   try {
