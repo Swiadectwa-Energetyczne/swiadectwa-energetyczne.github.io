@@ -4,6 +4,7 @@ import Why from '@/section/why';
 import How from '@/section/how';
 import About from '@/section/about';
 import Price from '@/section/price';
+import Contact from '@/section/contact';
 
 export default function Home() {
   return (
@@ -23,24 +24,7 @@ export default function Home() {
           <Why/>
         </section>
         <section id="contact">
-          <span>Kontakt</span>
-          <ul className={"list-disc list-inside"}>
-            <li key="name">Imię</li>
-            <li key="surname">Nazwisko</li>
-            <li key="tel">Telefon kontaktowy</li>
-            <li key="mail">Email</li>
-            <li key="post">Kod-Pocztowy</li>
-            <li key="sub">Temat</li>
-            <li key="content">Treść wiadomości</li>
-            <li key="agreement">Zgoda na przetwarzanie i polityka prywatności</li>
-          </ul>
-        </section>
-        <section>
-          Podziękowanie za kontakt:
-          Dziękuję za wypełnienie formularza kontaktowego. Zrobię wszystko, co w jej mocy, aby odpowiedzieć na Państwa
-          zapytanie jak najszybciej.
-          Dzięki za zaufanie, które mi okazujecie. Jeśli mają Państwo jakiekolwiek dodatkowe pytania lub potrzebujecie
-          dalszych informacji, proszę o kontakt mailowy.
+          <Contact/>
         </section>
       </article>
       <Footer/>

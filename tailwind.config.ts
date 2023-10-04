@@ -1,6 +1,4 @@
-import type { Config } from 'tailwindcss'
-
-const config: Config = {
+const config: any = {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -15,6 +13,10 @@ const config: Config = {
       'secondary-bg': '#064E3B',
       'font-secondary': '#f3f2e7',
       'primary-bg-lighter': '#f3f2e7',
+      'font-primary': '#064E3B',
+      'font-primary-placeholder': 'rgba(6,78,59,0.6)',
+      'primary-transparent': 'rgba(243,242,231,0.5)',
+      'error-red': '#f87171',
     },
     extend: {
       backgroundImage: {
@@ -24,6 +26,8 @@ const config: Config = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms')
+  ],
 }
 export default config

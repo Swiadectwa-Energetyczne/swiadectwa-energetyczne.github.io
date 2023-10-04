@@ -51,7 +51,7 @@ export default function PrivacyPolicy() {
           <div className='py-4'>
             <span className='font-bold text-xl'>Hosting</span>
             <ol className='list-decimal list-inside text-lg mx-4 my-2'>
-              <li>Serwis jest hostowany (technicznie utrzymywany) na serwerach operatora: <a className='font-semibold' href='https://github.com' target='_blank'>Github.com</a></li>
+              <li>Serwis jest hostowany (technicznie utrzymywany) na serwerach operatora: <a className='font-semibold' href='https://vercel.com' target='_blank'>Vercel.com</a></li>
             </ol>
           </div>
           <div className='py-4'>
