@@ -5,7 +5,7 @@ interface TextareaProps {
   type?: string;
   label?: string;
   id: string;
-  setValue: (value) => void;
+  setValue: (value: any) => void;
   validationError?: string;
   requiredError?: string;
   rows: number;
