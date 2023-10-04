@@ -9,7 +9,7 @@ interface InputProps {
   inputMode?: 'none' | 'text' | 'tel' | 'url' | 'email' | 'numeric' | 'decimal' | 'search' | undefined;
   minLength?: number;
   maxLength?: number;
-  setValue: (value) => void;
+  setValue: (value: any) => void;
   validationError?: string;
   requiredError?: string;
 }
