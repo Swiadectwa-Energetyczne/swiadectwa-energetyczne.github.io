@@ -9,7 +9,7 @@ export const About = () => {
         <span key="about-monika" className="text-lg font-semibold"> Monika</span>,
         ", absolwentka studiów o kierunku budownictwo na renomowanej",
         <span key="about-pp" className="text-lg font-semibold"> Politechnice Poznańskiej</span>,
-        ". Moja pasja do projektowania i konstruowania budynków jest nieodłączną częściąmojego życia. Obecnie pracuję jako asystentka projektanta konstruktora, dążąc do zdobycia niezbędnego doświadczenia, które pozwoli mi uzyskać uprawnienia konstrukcyjne."]}/>
+        ". Moja pasja do projektowania i konstruowania budynków jest nieodłączną częścią mojego życia. Obecnie pracuję jako asystentka projektanta konstruktora, dążąc do zdobycia niezbędnego doświadczenia, które pozwoli mi uzyskać uprawnienia konstrukcyjne."]}/>
       <TextContent htmlText={["Dodatko wykonuję",
         <span key="about-SChE" className="text-lg font-semibold"> Świadectwa Charakterystyki Energetyczej</span>,
         ", co łączy moją dzisiejszą pracę z doświadczeniem w projektowaniu instalacji fotowoltaicznych. Widzę w nich potencjał do zmiany naszego sposobu korzystania z energii, tworząc bardziej zrównoważone i ekologiczne środowisko."]}/>
