@@ -4,8 +4,12 @@ import {useState} from 'react';
 import Textarea from '@/components/textarea';
 import Checkbox from '@/components/checkbox';
 import TextContent from '@/components/text-content';
+import { createClientComponentClient } from "@supabase/auth-helpers-nextjs"
 
 export const Contact = () => {
+
+  const supabase = createClientComponentClient()
+
   const [name, setName] = useState<string | undefined>();
   const [surname, setSurname] = useState<string | undefined>();
   const [tel, setTel] = useState<string | undefined>();
@@ -58,6 +62,7 @@ export const Contact = () => {
 
   const send = () => {
     // TODO send validation etc.
+    supabase.functions.invoke('contact-email', {}).then(console.log)
     setContactVisible(false);
   }
 
