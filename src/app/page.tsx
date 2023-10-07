@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main className="font-sans flex flex-col h-screen">
       <Header/>
-      <article className="xl:mx-64 xl:my-10 mx-6 my-8 flex-1">
+      <article className="xl:mx-48 xl:my-10 mx-6 my-8 flex-1">
         <section id="about">
           <About/>
         </section>
