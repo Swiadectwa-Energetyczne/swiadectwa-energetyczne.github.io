@@ -23,7 +23,7 @@ const handler = async (_request: Request): Promise<Response> => {
   return new Response(JSON.stringify(data), {
     status: 200,
     headers: {
-      ..corsHeaders,
+      ...corsHeaders,
       'Content-Type': 'application/json',
     },
   })
