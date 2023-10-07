@@ -12,7 +12,7 @@ export const Checkbox = ({setValue, textHtml, id, requiredError}: CheckboxProps)
 
   const validate = (value: boolean) => {
     setValue(value)
-    if (value && !!requiredError) {
+    if (!value && !!requiredError) {
       setRequiredErrorVisible(requiredError);
       return;
     }

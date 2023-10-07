@@ -1,4 +1,5 @@
 import { serve } from 'https://deno.land/std@0.168.0/http/server.ts'
+import { corsHeaders } from '../_shared/cors.ts'
 
 const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY')
 
@@ -22,6 +23,7 @@ const handler = async (_request: Request): Promise<Response> => {
   return new Response(JSON.stringify(data), {
     status: 200,
     headers: {
+      ..corsHeaders,
       'Content-Type': 'application/json',
     },
   })
