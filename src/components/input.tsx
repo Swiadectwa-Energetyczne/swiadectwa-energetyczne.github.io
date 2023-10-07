@@ -18,10 +18,11 @@ export const Input = ({id, label, type, placeholder, pattern, inputMode, minLeng
   const [requiredErrorVisible, setRequiredErrorVisible] = useState<string>('');
 
   const validate = (value: string | undefined) => {
-    if (!!value) {
-      setValue(value)
+    const trimmedValue = value?.trim()
+    if (!!trimmedValue) {
+      setValue(trimmedValue)
     }
-    if (!value && !!requiredError) {
+    if (!trimmedValue && !!requiredError) {
       setRequiredErrorVisible(requiredError);
       return;
     }

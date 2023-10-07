@@ -47,14 +47,15 @@ export const Contact = () => {
   const validatePost = (value: string) => {
     const postWithDashRegExp = /^[0-9]{2}-[0-9]{3}$/
     const postRegExp = /^[0-9]{5}$/
-    if (!postWithDashRegExp.test(value) && !postRegExp.test(value)) {
-      setPost(value);
+    const normalizedValue = value.replaceAll(" ", "");
+    if (!postWithDashRegExp.test(normalizedValue) && !postRegExp.test(normalizedValue)) {
+      setPost(normalizedValue);
       setPostValidation('Twój kod pocztowy jest niepoprawny');
       return;
     }
 
-    if (!value.includes('-')) {
-      const postWithDash = `${value.substring(0, 2)}-${value.substring(2, 5)}`
+    if (!normalizedValue.includes('-')) {
+      const postWithDash = `${normalizedValue.substring(0, 2)}-${normalizedValue.substring(2, 5)}`
       setPost(postWithDash);
     }
     setPostValidation('');
