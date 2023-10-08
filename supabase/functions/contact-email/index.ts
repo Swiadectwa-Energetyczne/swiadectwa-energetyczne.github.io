@@ -4,7 +4,9 @@ import { corsHeaders } from '../_shared/cors.ts'
 const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY')
 
 const handler = async (_request: Request): Promise<Response> => {
+  const body = await _request.json();
   const {email, name, surname, tel, post, subject, content} = await _request.json();
+  console.log(body);
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: {
