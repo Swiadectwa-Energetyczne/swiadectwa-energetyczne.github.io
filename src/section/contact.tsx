@@ -5,6 +5,7 @@ import Textarea from '@/components/textarea';
 import Checkbox from '@/components/checkbox';
 import TextContent from '@/components/text-content';
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs"
+import {contactEmail} from '@/service/contact-email';
 
 export const Contact = () => {
 
@@ -62,9 +63,11 @@ export const Contact = () => {
   }
 
   const send = () => {
-    // TODO send validation etc.
-    supabase.functions.invoke('contact-email', {}).then(console.log)
-    setContactVisible(false);
+    if (name && surname && tel && email && post && subject && content && isPrivacyChecked) {
+      contactEmail(supabase, {name, surname, tel, email, post, subject, content});
+      setContactVisible(false);
+    }
+    setContactVisible(true);
   }
 
   return (
