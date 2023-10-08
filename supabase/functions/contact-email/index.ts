@@ -5,14 +5,16 @@ const RESEND_API_KEY = Deno.env.get('RESEND_API_KEY')
 
 const handler = async (_request: Request): Promise<Response> => {
   const requestBody = _request.body;
+  console.log(requestBody);
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: {
+      ...corsHeaders,
       'Content-Type': 'application/json',
       Authorization: `Bearer ${RESEND_API_KEY}`,
     },
     body: JSON.stringify({
-      from: requestBody.email,
+      from: `${requestBody.email}`,
       to: 'swiadectwa.eko.kontakt@gmail.com',
       subject: `Zapytanie kontaktowe: ${requestBody.subject}`,
       html: ```

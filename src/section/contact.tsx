@@ -63,9 +63,10 @@ export const Contact = () => {
 
   const send = () => {
     if (name && surname && tel && email && post && subject && content && isPrivacyChecked) {
+      console.log({name, surname, tel, email, post, subject, content});
       supabase.functions.invoke('contact-email', {
         body: {name, surname, tel, email, post, subject, content}
-      }).then(console.log)
+      }).then(console.log);
       setContactVisible(false);
     }
     setContactVisible(true);
