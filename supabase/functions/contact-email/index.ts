@@ -8,9 +8,8 @@ const handler = async (_request: Request): Promise<Response> => {
     return new Response('ok', { headers: { ...corsHeaders }, status: 200 })
   }
 
-  const body = await _request.json();
   const {email, name, surname, tel, post, subject, content} = await _request.json();
-  console.log(body);
+  console.log(email);
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: {
