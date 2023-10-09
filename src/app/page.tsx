@@ -2,28 +2,28 @@ import Header from '../components/header';
 import Footer from '@/components/footer';
 import Why from '@/section/why';
 import How from '@/section/how';
-import About from '@/section/about';
 import Price from '@/section/price';
 import Contact from '@/section/contact';
+import Hi from '@/section/hi';
 
 export default function Home() {
   return (
     <main className="font-sans flex flex-col h-screen">
       <Header/>
-      <article className="xl:mx-48 xl:my-10 mx-6 my-8 flex-1">
-        <section id="about">
-          <About/>
+      <article className="xl:my-10 my-8 flex-1">
+        <section className="xl:mx-48 xl:my-12 my-2">
+         <Hi/>
         </section>
-        <section id="price">
+        <section className="xl:mx-48 mx-6 xl:my-24 my-2" id="price">
           <Price/>
         </section>
-        <section id="how">
+        <section className="xl:mx-48 mx-6 xl:my-24 my-2" id="how">
           <How/>
         </section>
-        <section id="why">
+        <section className="xl:mx-48 mx-6 xl:my-24 my-2" id="why">
           <Why/>
         </section>
-        <section id="contact">
+        <section className="xl:mx-48 mx-6 xl:my-24 my-2" id="contact">
           <Contact/>
         </section>
       </article>

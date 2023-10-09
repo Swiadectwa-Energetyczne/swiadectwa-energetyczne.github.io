@@ -3,7 +3,7 @@ import ImageWithText from '@/components/image-with-text';
 export const Why = () => {
   return (
     <>
-      <div className="font-bold text-3xl my-2">Dlaczego potrzebujesz Świadectwo Charakterystyki Energetycznej?</div>
+      <div className="font-bold text-3xl my-4">Dlaczego potrzebujesz Świadectwo Charakterystyki Energetycznej?</div>
       <ImageWithText image="coins-green.svg" alt="Sprzedaż"
                      animation={true}
                      text="Obowiązkowe w przypadku sprzedaży lub wynajmu nieruchomości."/>

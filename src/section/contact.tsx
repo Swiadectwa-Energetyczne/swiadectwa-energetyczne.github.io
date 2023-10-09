@@ -71,7 +71,7 @@ export const Contact = () => {
   }
 
   return (
-    <div className="flex flex-col text-lg font-medium break-normal my-32">
+    <div className="flex flex-col text-lg font-medium break-normal mb-32">
       {isContactVisible && <>
           <div className="font-bold text-3xl my-2">Kontakt</div>
           <Input placeholder="Imię" id="name" label="Imię" type="text" maxLength={60}
