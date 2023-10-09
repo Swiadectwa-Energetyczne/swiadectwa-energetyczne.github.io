@@ -1,9 +1,9 @@
 import './globals.css'
 import type {Metadata} from 'next'
 import {Analytics} from '@vercel/analytics/react';
-import {Montserrat} from 'next/font/google'
+import {Inter} from 'next/font/google';
 
-const montserrat = Montserrat({subsets: ['latin'], variable: '--display-font',})
+const inter = Inter({subsets: ['latin'], variable: '--display-font',})
 
 export const metadata: Metadata = {
   title: 'Świadectwa Charakterystyki Energetycznej',
@@ -24,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang='pl'>
-    <body className={`${montserrat.variable} font-display`}>
+    <body className={`${inter.variable} font-display`}>
     {children}
     <Analytics/>
     </body>
