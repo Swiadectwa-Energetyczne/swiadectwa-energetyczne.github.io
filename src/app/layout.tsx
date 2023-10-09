@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   applicationName: 'Świadectwa Charakterystyki Energetycznej',
   authors: {url: 'https://www.linkedin.com/in/dominik-rolewski-01bba9155/', name: 'Dominik Rolewski'},
   creator: 'Dominik Rolewski',
-  other: {'instagram': 'TBD', 'facebook': 'TBD'},
+  other: {'instagram': 'https://www.instagram.com/swiadectwa_eko/', 'facebook': 'https://www.facebook.com/profile.php?id=61551862124461'},
   publisher: 'Vercel',
   keywords: ['Świadectwa Charakterystyki Energetycznej', 'Ekologia', 'Eko', 'Świadectwa', 'Certyfikaty', 'fotowoltaika', 'Energia', 'swiadectwa-eko', 'SCE', 'efektywność energetyczna', 'budynki', 'ekspert energetyczny', 'inwentaryzacje'],
   category: 'Ekologia',
