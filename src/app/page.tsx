@@ -11,7 +11,7 @@ export default function Home() {
     <main className="font-sans flex flex-col h-screen">
       <Header/>
       <article className="xl:my-10 my-8 flex-1">
-        <section className="xl:mx-48 xl:my-12 my-2">
+        <section className="xl:mx-48 xl:my-8 my-6">
          <Hi/>
         </section>
         <section className="xl:mx-48 mx-6 xl:my-24 my-2" id="price">
