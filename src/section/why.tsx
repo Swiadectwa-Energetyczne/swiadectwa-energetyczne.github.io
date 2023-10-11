@@ -21,7 +21,7 @@ export const Why = () => {
                      htmlText={[
       <a key="moje-cieplo" className='font-medium text-lg break-normal'
          href='https://mojecieplo.gov.pl'
-         target='_blank'>Dofinansowanie takie jak "Moje ciepło"</a>]}/>
+         target='_blank'>Dofinansowanie takie jak &quot;Moje ciepło&quot;</a>]}/>
       <ImageWithText image="search-alt-green.svg" alt="Ustawa"
                      animation={true} htmlText={[
         <a key="ustawa" className='font-medium text-lg break-normal'
