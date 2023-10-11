@@ -17,11 +17,11 @@ export default function Home() {
         <section className="xl:mx-48 mx-6 xl:my-24 my-2" id="price">
           <Price/>
         </section>
-        <section className="xl:mx-48 mx-6 xl:my-24 my-2" id="how">
-          <How/>
-        </section>
         <section className="xl:mx-48 mx-6 xl:my-24 my-2" id="why">
           <Why/>
+        </section>
+        <section className="xl:mx-48 mx-6 xl:my-24 my-2" id="how">
+          <How/>
         </section>
         <section className="xl:mx-48 mx-6 xl:my-24 my-2" id="contact">
           <Contact/>
