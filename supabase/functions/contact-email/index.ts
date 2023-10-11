@@ -21,7 +21,7 @@ const handler = async (_request: Request): Promise<Response> => {
       reply_to: `${email}`,
       to: `swiadectwa.eko.kontakt@gmail.com`,
       subject: `Zapytanie kontaktowe: ${subject}`,
-      html: `<h1>Nowe zapytanie o kontakt od: ${email}</h1><h2>Dane osobowe interesanta:</h2><h3>Imię: ${name}</h3><h3>Nazwisko: ${surname}</h3><h3>Numer telefonu: ${tel}</h3><h3>Email: ${email}</h3><h3>Adres pocztowy: ${post}</h3><h3>Temat wiadomości: ${subject}</h3><h3>Tresć wiadomości:</h3><h3>${content}</h3>`,
+      html: `<h1>Nowe zapytanie o kontakt od: ${email}</h1><h2>Dane osobowe interesanta:</h2><h3>Imię: ${name}</h3><h3>Nazwisko: ${surname ?? ""}</h3><h3>Numer telefonu: ${tel ?? ""}</h3><h3>Email: ${email}</h3><h3>Adres pocztowy: ${post ?? ""}</h3><h3>Temat wiadomości: ${subject}</h3><h3>Tresć wiadomości:</h3><h3>${content ?? ""}</h3>`,
     }),
   })
 

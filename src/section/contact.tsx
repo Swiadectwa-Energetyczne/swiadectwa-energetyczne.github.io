@@ -11,13 +11,10 @@ export const Contact = () => {
   const supabase = createClientComponentClient()
 
   const [name, setName] = useState<string | undefined>();
-  const [surname, setSurname] = useState<string | undefined>();
   const [tel, setTel] = useState<string | undefined>();
   const [telValidation, setTelValidation] = useState<string>('');
   const [email, setEmail] = useState<string | undefined>();
   const [emailValidation, setEmailValidation] = useState<string>('');
-  const [post, setPost] = useState<string | undefined>();
-  const [postValidation, setPostValidation] = useState<string>('');
   const [subject, setSubject] = useState<string | undefined>();
   const [content, setContent] = useState<string | undefined>();
   const [isPrivacyChecked, setPrivacyChecked] = useState<boolean>(false);
@@ -25,7 +22,7 @@ export const Contact = () => {
 
   const validateTel = (value: string) => {
     const numberWithoutDash = value.replaceAll('-', '');
-    if (numberWithoutDash.length !== 9) {
+    if (numberWithoutDash.length > 0  && numberWithoutDash.length < 9) {
       setTelValidation('Twój numer telefonu powinien zawierać 9 cyfr');
       setTel(numberWithoutDash);
       return;
@@ -44,27 +41,10 @@ export const Contact = () => {
     setEmailValidation('');
   }
 
-  const validatePost = (value: string) => {
-    const postWithDashRegExp = /^[0-9]{2}-[0-9]{3}$/
-    const postRegExp = /^[0-9]{5}$/
-    const normalizedValue = value.replaceAll(" ", "");
-    if (!postWithDashRegExp.test(normalizedValue) && !postRegExp.test(normalizedValue)) {
-      setPost(normalizedValue);
-      setPostValidation('Twój kod pocztowy jest niepoprawny');
-      return;
-    }
-
-    if (!normalizedValue.includes('-')) {
-      const postWithDash = `${normalizedValue.substring(0, 2)}-${normalizedValue.substring(2, 5)}`
-      setPost(postWithDash);
-    }
-    setPostValidation('');
-  }
-
   const send = () => {
-    if (name && surname && tel && !telValidation && email && !emailValidation && post && !postValidation && subject && content && isPrivacyChecked) {
+    if (name && !telValidation && email && !emailValidation && subject && isPrivacyChecked) {
       supabase.functions.invoke('contact-email', {
-        body: {name, surname, tel, email, post, subject, content}
+        body: {name, tel, email, subject, content}
       }).then(() => setContactVisible(false));
     }
     setContactVisible(true);
@@ -77,21 +57,16 @@ export const Contact = () => {
           <Input placeholder="Imię" id="name" label="Imię" type="text" maxLength={60}
                  setValue={(value) => setName(value)}
                  requiredError='Twoje imię jest wymagane'/>
-          <Input placeholder="Nazwisko" id="surname" label="Nazwisko" type="text" maxLength={60}
-                 setValue={(value) => setSurname(value)} requiredError='Twoje nazwisko jest wymagane'/>
           <Input placeholder="Telefon kontaktowy" id="tel" label="Telefon kontaktowy" maxLength={14} type="tel"
                  inputMode="numeric" setValue={(value) => validateTel(value)} validationError={telValidation}
-                 requiredError='Twój numer telefonu jest wymagany'/>
+                 subLabel="Opcjonalny"/>
           <Input placeholder="Email" id="email" label="Email" type="email" setValue={(value) => validateEmail(value)}
                  validationError={emailValidation} requiredError='Twój email jest wymagany'/>
-          <Input placeholder="Kod pocztowy" id="zip" label="Kod pocztowy" type="text" pattern="[0-9]{5}"
-                 inputMode="numeric"
-                 maxLength={6} minLength={5} setValue={(value) => validatePost(value)} validationError={postValidation}
-                 requiredError='Twój kod pocztowy jest wymagany'/>
           <Input placeholder="Temat" id="subject" label="Temat" type="text" setValue={(value) => setSubject(value)}
-                 requiredError='Temat wiadomości jest wymagany'/>
+                 requiredError='Temat wiadomości jest wymagany'
+                 subLabel="Jeśli Świadectwo jest pilnie potrzebne - proszę o dopisek - PILNE w temacie wiadomości."/>
           <Textarea placeholder="Treść wiadomości" label="Treść wiadomości" id="content"
-                    setValue={(value) => setContent(value)} requiredError='Treść wiadomości jest wymagana' rows={8}/>
+                    setValue={(value) => setContent(value)} rows={8} subLabel="Opcjonalna"/>
           <Checkbox setValue={(value) => setPrivacyChecked(value)} requiredError={'Zgoda jest wymagana'} id="privacy"
                     textHtml={
                       ["Zgoda na przetwarzanie i ",

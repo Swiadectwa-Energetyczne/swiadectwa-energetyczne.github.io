@@ -12,13 +12,17 @@ interface InputProps {
   setValue: (value: any) => void;
   validationError?: string;
   requiredError?: string;
+  subLabel?: string;
 }
 
-export const Input = ({id, label, type, placeholder, pattern, inputMode, minLength, maxLength, setValue, validationError, requiredError}: InputProps) => {
+export const Input = ({id, label, subLabel, type, placeholder, pattern, inputMode, minLength, maxLength, setValue, validationError, requiredError}: InputProps) => {
   const [requiredErrorVisible, setRequiredErrorVisible] = useState<string>('');
 
   const validate = (value: string | undefined) => {
-    const trimmedValue = value?.trim()
+    const trimmedValue = value?.trim();
+    if (value?.length === 0){
+      setValue(value);
+    }
     if (!!trimmedValue) {
       setValue(trimmedValue)
     }
@@ -32,7 +36,8 @@ export const Input = ({id, label, type, placeholder, pattern, inputMode, minLeng
   return (
     <div className="my-2">
       {label && <label htmlFor={id}
-             className="block text-xl font-medium leading-8 text-font-primary font-medium">{label}</label> }
+             className="block text-xl leading-8 text-font-primary font-medium">{label}</label> }
+      {subLabel && <div className="text-sm text-font-primary font-medium">{subLabel}</div>}
       <div className="relative mt-2 rounded-md bg-primary-transparent">
         <input type={type} name={id} id={id}
                className="block w-full rounded-lg border-0 py-1 pl-4 pr-8 text-font-primary ring-1 ring-inset ring-font-primary-placeholder bg-primary-transparent placeholder:text-font-primary-placeholder focus:ring-2 focus:ring-inset focus:ring-font-primary sm:text-lg sm:leading-8"

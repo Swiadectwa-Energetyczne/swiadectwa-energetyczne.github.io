@@ -9,9 +9,10 @@ interface TextareaProps {
   validationError?: string;
   requiredError?: string;
   rows: number;
+  subLabel?: string;
 }
 
-export const Textarea = ({id, label, placeholder, setValue, validationError, requiredError, rows}: TextareaProps) => {
+export const Textarea = ({id, label, subLabel, placeholder, setValue, validationError, requiredError, rows}: TextareaProps) => {
   const [requiredErrorVisible, setRequiredErrorVisible] = useState<string>('');
 
   const validate = (value: string | undefined) => {
@@ -27,7 +28,8 @@ export const Textarea = ({id, label, placeholder, setValue, validationError, req
 
   return (
     <div className="my-2">
-      <label htmlFor={id} className="block text-xl font-medium leading-8 text-font-primary font-medium">{label}</label>
+      {label && <label htmlFor={id} className="block text-xl font-medium leading-8 text-font-primary font-medium">{label}</label>}
+      {subLabel && <div className="text-sm text-font-primary font-medium">{subLabel}</div>}
       <div className="relative mt-2 rounded-md bg-primary-transparent">
       <textarea id={id} name={id} rows={rows}
                 className="block w-full resize-none rounded-lg border-0 py-1 pl-4 pr-8 text-font-primary ring-1 ring-inset ring-font-primary-placeholder bg-primary-transparent placeholder:text-font-primary-placeholder focus:ring-2 focus:ring-inset focus:ring-font-primary sm:text-lg sm:leading-8 resize-none"

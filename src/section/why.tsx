@@ -16,11 +16,17 @@ export const Why = () => {
       <ImageWithText image="chart-line-up-green.svg" alt="Ocena efektywności"
                      animation={true}
                      text="Przydatne w ocenie efektywności energetycznej budynku."/>
+      <ImageWithText image="hand-holding-usd-green.svg" alt="Dofinansowanie"
+                     animation={true}
+                     htmlText={[
+      <a key="moje-cieplo" className='font-medium text-lg break-normal'
+         href='https://mojecieplo.gov.pl'
+         target='_blank'>Dofinansowanie takie jak "Moje ciepło"</a>]}/>
       <ImageWithText image="search-alt-green.svg" alt="Ustawa"
-                     animation={true} htmlText={["Po więcej informacji odsyłam do ustawy: ",
+                     animation={true} htmlText={[
         <a key="ustawa" className='font-medium text-lg break-normal'
            href='https://isap.sejm.gov.pl/isap.nsf/download.xsp/WDU20160000831/T/D20160831L.pdf'
-           target='_blank'>&nbsp;Dz.U. 2016 poz. 831</a>]}/>
+           target='_blank'>Po więcej informacji odsyłam do ustawy: Dz.U. 2016 poz. 831</a>]}/>
     </>
   );
 }
