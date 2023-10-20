@@ -20,8 +20,9 @@ export const Input = ({id, label, subLabel, type, placeholder, pattern, inputMod
 
   const validate = (value: string | undefined) => {
     const trimmedValue = value?.trim();
-    if (value?.length === 0){
+    if (value?.length === 0 && !requiredError) {
       setValue(value);
+      return;
     }
     if (!!trimmedValue) {
       setValue(trimmedValue)
