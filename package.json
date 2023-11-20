@@ -28,6 +28,6 @@
     "typescript": "5.2.2"
   },
   "devDependencies": {
-    "supabase": "^1.100.1"
+    "supabase": "^1.112.0"
   }
 }
