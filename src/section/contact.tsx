@@ -57,7 +57,7 @@ export const Contact = () => {
     <div className="flex flex-col text-lg font-medium break-normal mb-32">
       {isContactVisible && <>
           <div className="font-bold text-3xl my-2">Kontakt</div>
-          <div className="text-xl my-2">Zadzwoń pod numer telefonu: <span className="font-bold">607857352</span> lub wyślij poniższy formularz kontaktowy.</div>
+          <div className="text-xl my-2">Zadzwoń pod numer telefonu: <a href="tel:607857352" className="font-bold">607857352</a> lub wyślij poniższy formularz kontaktowy.</div>
           <Input placeholder="Imię" id="name" label="Imię" type="text" maxLength={60}
                  setValue={(value) => setName(value)}
                  requiredError='Twoje imię jest wymagane'/>
