@@ -11,11 +11,11 @@ const config: any = {
     colors: {
       'button-hover': 'rgba(6,78,59,0.1)',
       'secondary-bg': '#064E3B',
-      'font-secondary': '#f3f2e7',
-      'primary-bg-lighter': '#f3f2e7',
+      'font-secondary': '#F6F7F3',
+      'primary-bg-lighter': '#F6F7F3',
       'font-primary': '#064E3B',
       'font-primary-placeholder': 'rgba(6,78,59,0.6)',
-      'primary-transparent': 'rgba(243,242,231,0.5)',
+      'primary-transparent': 'rgba(246,247,243,0.5)',
       'error-red': '#f87171',
     },
     extend: {

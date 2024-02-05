@@ -4,11 +4,8 @@ import {useState} from 'react';
 import Textarea from '@/components/textarea';
 import Checkbox from '@/components/checkbox';
 import TextContent from '@/components/text-content';
-import { createClientComponentClient } from "@supabase/auth-helpers-nextjs"
 
 export const Contact = () => {
-
-  const supabase = createClientComponentClient()
 
   const [name, setName] = useState<string | undefined>();
   const [tel, setTel] = useState<string | undefined>();
@@ -41,11 +38,17 @@ export const Contact = () => {
     setEmailValidation('');
   }
 
-  const send = () => {
+  const send = async () => {
     if (name && !telValidation && email && !emailValidation && subject && isPrivacyChecked) {
-      supabase.functions.invoke('contact-email', {
-        body: {name, tel, email, subject, content}
-      }).then(() => setContactVisible(false));
+      const response = await fetch('/api/email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({name, tel, email, subject, content})
+      });
+      setContactVisible(false);
+      return;
     }
     setContactVisible(true);
   }
@@ -54,6 +57,7 @@ export const Contact = () => {
     <div className="flex flex-col text-lg font-medium break-normal mb-32">
       {isContactVisible && <>
           <div className="font-bold text-3xl my-2">Kontakt</div>
+          <div className="text-xl my-2">Zadzwoń pod numer telefonu: <span className="font-bold">607857352</span> lub wyślij poniższy formularz kontaktowy.</div>
           <Input placeholder="Imię" id="name" label="Imię" type="text" maxLength={60}
                  setValue={(value) => setName(value)}
                  requiredError='Twoje imię jest wymagane'/>

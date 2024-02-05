@@ -5,7 +5,7 @@
 
 :root {
   --font-primary: #064E3B; /* 064E3B Emerald-900 */
-  --background-primary: #f3f2e7; /* #f3f2e7 */
+  --background-primary: #F6F7F3; /* #F6F7F3 */
   --background-secondary: #064E3B; /* #064E3B Emerald-950 */
 }
 
@@ -20,7 +20,7 @@ html, body {
 /* Firefox */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #064E3B #f3f2e7;
+  scrollbar-color: #064E3B #F6F7F3;
 }
 
 /* Chrome, Edge and Safari */
@@ -30,15 +30,15 @@ html, body {
 }
 *::-webkit-scrollbar-track {
   border-radius: 5px;
-  background-color: #f3f2e7;
+  background-color: #F6F7F3;
 }
 
 *::-webkit-scrollbar-track:hover {
-  background-color: #f3f2e7;
+  background-color: #F6F7F3;
 }
 
 *::-webkit-scrollbar-track:active {
-  background-color: #f3f2e7;
+  background-color: #F6F7F3;
 }
 
 *::-webkit-scrollbar-thumb {
